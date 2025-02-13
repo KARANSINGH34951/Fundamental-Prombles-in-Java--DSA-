@@ -30,7 +30,10 @@ public class _2 {
           res.add(arr[i]);
       }
     }
-    System.out.print(Collections.sort(res));
+    Collections.sort(res);
+    Collections.reverse(res);
+    System.out.println(res);
   }
 
 }
+
