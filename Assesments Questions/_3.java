@@ -2,8 +2,8 @@
 public class _3 {
   public static void main(String[] args) {
     int[][] arr={{23,4,5,77},
-            {4,56,7,8},
-            {6,65,4,6},
+            {4,56,890,8},
+            {6,666,99,6},
             {4,9,4,7}};
 
   int row=arr.length;

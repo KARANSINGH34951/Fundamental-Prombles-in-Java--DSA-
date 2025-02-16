@@ -7,8 +7,40 @@
 //  2   #[3,3]
 
 public class _11 {
-  public static void main(String[] args) {
-    
-  }
-  
+ 
+    public static int longestSubarray(int[] arr, int threshold) {
+        int left = 0, maxSize = 0;
+
+        for (int right = 0; right < arr.length; right++) {
+           
+            int minVal = arr[left], maxVal = arr[left];
+            for (int i = left; i <= right; i++) {
+                minVal = Math.min(minVal, arr[i]);
+                maxVal = Math.max(maxVal, arr[i]);
+            }
+
+            
+            while (maxVal - minVal > threshold) {
+                left++;
+           
+                minVal = arr[left];
+                maxVal = arr[left];
+                for (int i = left; i <= right; i++) {
+                    minVal = Math.min(minVal, arr[i]);
+                    maxVal = Math.max(maxVal, arr[i]);
+                }
+            }
+
+            maxSize = Math.max(maxSize, right - left + 1);
+        }
+
+        return maxSize;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 3, 4, 5};
+        int threshold = 0;
+        System.out.println(longestSubarray(arr, threshold));  
+    }
 }
+

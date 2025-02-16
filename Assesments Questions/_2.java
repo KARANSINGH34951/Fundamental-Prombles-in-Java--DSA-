@@ -1,7 +1,6 @@
 // 2.	Given an array num, check if a number is a palindromic number and return the array of such numbers in decreasing order.
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class _2 {
